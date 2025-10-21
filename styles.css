@@ -374,6 +374,55 @@ p.signature {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Decoraciones 3D pixel art */
+.pixel-art-decoration {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    opacity: 0;
+    transition: all 0.8s ease-out 0.5s;
+}
+
+.pixel-art-decoration.left {
+    left: -180px;
+    transform: translateY(-50%) rotateY(-20deg) rotateZ(-8deg);
+}
+
+.pixel-art-decoration.right {
+    right: -180px;
+    transform: translateY(-50%) rotateY(20deg) rotateZ(8deg);
+}
+
+.envelope.opened ~ .pixel-art-decoration {
+    opacity: 1;
+}
+
+.decoration-image {
+    width: 180px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 4px #ff6b9d,
+        0 0 0 8px #ffb3d9,
+        inset 0 0 20px rgba(255, 107, 157, 0.3);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.4));
+    transition: all 0.4s ease;
+}
+
+.decoration-image:hover {
+    transform: scale(1.15) rotateY(10deg);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 5px #ff1744,
+        0 0 0 10px #ff6b9d,
+        inset 0 0 25px rgba(255, 107, 157, 0.4);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .letter {
@@ -393,6 +442,10 @@ p.signature {
     .character-image { width: 120px; }
     .character-label { font-size: 14px; padding: 5px 12px; }
     .characters { bottom: 40px; padding: 0 40px; }
+    
+    .decoration-image { width: 140px; }
+    .pixel-art-decoration.left { left: -140px; }
+    .pixel-art-decoration.right { right: -140px; }
     
     .envelope { width: 320px; height: 230px; }
     .envelope-body { width: 320px; height: 230px; border-width: 8px; }
@@ -419,6 +472,10 @@ p.signature {
     .character-image { width: 100px; }
     .character-label { font-size: 12px; padding: 4px 10px; }
     .characters { bottom: 30px; padding: 0 30px; }
+    
+    .decoration-image { width: 120px; }
+    .pixel-art-decoration.left { left: -120px; }
+    .pixel-art-decoration.right { right: -120px; }
     
     .envelope { width: 280px; height: 200px; }
     .envelope-body { width: 280px; height: 200px; border-width: 6px; }
