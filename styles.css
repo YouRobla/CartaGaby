@@ -385,12 +385,12 @@ p.signature {
 }
 
 .pixel-art-decoration.left {
-    left: -180px;
+    left: -220px;
     transform: translateY(-50%) rotateY(-20deg) rotateZ(-8deg);
 }
 
 .pixel-art-decoration.right {
-    right: -180px;
+    right: -220px;
     transform: translateY(-50%) rotateY(20deg) rotateZ(8deg);
 }
 
@@ -444,8 +444,8 @@ p.signature {
     .characters { bottom: 40px; padding: 0 40px; }
     
     .decoration-image { width: 140px; }
-    .pixel-art-decoration.left { left: -140px; }
-    .pixel-art-decoration.right { right: -140px; }
+    .pixel-art-decoration.left { left: -170px; }
+    .pixel-art-decoration.right { right: -170px; }
     
     .envelope { width: 320px; height: 230px; }
     .envelope-body { width: 320px; height: 230px; border-width: 8px; }
@@ -474,8 +474,8 @@ p.signature {
     .characters { bottom: 30px; padding: 0 30px; }
     
     .decoration-image { width: 120px; }
-    .pixel-art-decoration.left { left: -120px; }
-    .pixel-art-decoration.right { right: -120px; }
+    .pixel-art-decoration.left { left: -150px; }
+    .pixel-art-decoration.right { right: -150px; }
     
     .envelope { width: 280px; height: 200px; }
     .envelope-body { width: 280px; height: 200px; border-width: 6px; }
